@@ -10,7 +10,7 @@ public class Radio {
             return;
 
         }
-            this.channelNumber++;
+        this.channelNumber++;
     }
 
     public void prevChannelNumber() {
@@ -48,14 +48,12 @@ public class Radio {
         this.channelNumber = channelNumber;
     }
 
-    public int getChannelNumber()
-    {
+    public int getChannelNumber() {
         return this.channelNumber;
 
     }
 
-    public int getVolume()
-    {
+    public int getVolume() {
         return this.volume;
 
     }
