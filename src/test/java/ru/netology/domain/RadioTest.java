@@ -24,6 +24,17 @@ class RadioTest {
     }
 
     @Test
+    void successChangeChannel() {
+        Radio receiver = new Radio();
+        receiver.nextChannelNumber();
+        int actual = receiver.getChannelNumber();
+        assertEquals(1, actual);
+        receiver.prevChannelNumber();
+        int actual1 = receiver.getChannelNumber();
+        assertEquals(0, actual1);
+    }
+
+    @Test
     void setIncorrectMaxChannel() {
         Radio receiver = new Radio();
         receiver.setChannelNumber(5);
@@ -57,5 +68,16 @@ class RadioTest {
         receiver.decreaseVolume();
         int actual = receiver.getVolume();
         assertEquals(0, actual);
+    }
+
+    @Test
+    void successVolumeCheck() {
+        Radio receiver = new Radio();
+        receiver.increaseVolume();
+        int actual = receiver.getVolume();
+        assertEquals(1, actual);
+        receiver.decreaseVolume();
+        int actual1 = receiver.getVolume();
+        assertEquals(0, actual1);
     }
 }
